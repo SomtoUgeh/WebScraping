@@ -28,7 +28,8 @@ print('titles:')
 print(titles, '\n')
 
 
-language_element = browser.find_elements_by_xpath("//p[@class=’mb-0 f6 text-gray’]")
+language_element = browser.find_elements_by_xpath(
+    "//p[@class=’mb-0 f6 text-gray’]")
 languages = [x.text for x in language_element]
 print("languages: ")
 print(languages, '\n')
