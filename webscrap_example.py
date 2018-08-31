@@ -20,7 +20,7 @@ except TimeoutException:
     browser.quit()
 
 # find_elements_by_xpath returns an array of selenium objects.
-titles_element = browser.find_elements_by_class_name("js-repo")
+titles_element = browser.find_elements_by_xpath("//a[@class='repo js-repo']")
 # use list comprehension to get the actual repo titles and not the selenium objects.
 titles = [x.text for x in titles_element]
 
@@ -28,7 +28,7 @@ print('titles:')
 print(titles, '\n')
 
 
-language_element = browser.find_elements_by_class_name("text-gray")
+language_element = browser.find_elements_by_class_name("//p[@class=’mb-0 f6 text-gray’]")
 languages = [x.text for x in language_element]
 print("languages: ")
 print(languages, '\n')
